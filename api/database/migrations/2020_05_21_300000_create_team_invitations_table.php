@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TasksMigration extends Migration
+class CreateTeamInvitationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class TasksMigration extends Migration
      */
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->uuid('task_id');
-            $table->string('title');
-            $table->string('description');
-            $table->uuid('created_user_id');
-            $table->uuid('delegated_user_id');
-            $table->uuid('task_status_id');
-            $table->uuid('task_stage_id');
+        Schema::create('team_invitations', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->foreignId('team_id')->constrained()->cascadeOnDelete();
+            $table->string('email');
+            $table->string('role')->nullable();
             $table->timestamps();
             $table->softDeletes();
+            $table->unique(['team_id', 'email']);
         });
     }
 
@@ -33,6 +31,6 @@ class TasksMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('tasks');
+        Schema::dropIfExists('team_invitations');
     }
 }
