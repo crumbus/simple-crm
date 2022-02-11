@@ -1,8 +1,40 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "@mdi/font/css/materialdesignicons.min.css";
 
 // Variables
-@import 'variables';
+@import "~vuetify/dist/vuetify.min.css";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+/* Default Scrollbars*/
+div.table-responsive::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+div.table-responsive::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    border-radius: 40px;
+    background-color: rgb(246,246,246);
+}
+div.table-responsive::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    background-color: rgb(204,195,195);
+}
+/* Default Scrollbars*/
+* {
+    font-family: 'Nunito', sans-serif;
+}
+.img-responsive {
+    height: auto;
+}
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+.fw {
+    width: 100%;
+}
+.powered-logos .img-responsive {
+    margin: 5px;
+}
