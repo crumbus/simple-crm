@@ -10,34 +10,67 @@ div.table-responsive::-webkit-scrollbar,
 body::-webkit-scrollbar {
     width: 0.5em;
 }
+
 div.table-responsive::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
     border-radius: 40px;
-    background-color: rgb(246,246,246);
+    background-color: rgb(246, 246, 246);
 }
+
 div.table-responsive::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
     border-radius: 40px;
-    background-color: rgb(204,195,195);
+    background-color: rgb(204, 195, 195);
 }
+
 /* Default Scrollbars*/
+
+/* Autofill */
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active input:-webkit-autofill {
+    -webkit-background-clip: text;
+}
+
 * {
     font-family: 'Nunito', sans-serif;
 }
+
 .img-responsive {
     height: auto;
 }
+
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
+
 .fw {
     width: 100%;
 }
+
 .powered-logos .img-responsive {
     margin: 5px;
 }
+
 .d-block {
     display: block;
+}
+
+.auth-inner {
+    width: 500px;
+    margin: 40px auto;
+}
+
+@media (max-width: 768px) {
+    .auth-inner {
+        width: 90%;
+    }
+}
+a,
+.router-link-active {
+    text-decoration: none;
 }
