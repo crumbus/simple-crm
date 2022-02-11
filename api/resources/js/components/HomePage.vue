@@ -89,10 +89,12 @@
             <v-layout column align-center justify-center>
                 <h2 class="white--text" style="margin-top: 30px;">Powered with</h2>
                 <div class="d-flex justify-center align-center powered-logos" style="margin-top: -20px;">
+                    <img src="assets/images/logo/php-logo.png" alt="PHP" class="img-responsive" width="120">
                     <img src="assets/images/logo/laravel-logolockup-cmyk-red.svg" alt="Laravel" class="img-responsive" width="400">
+                    <img src="assets/images/logo/MariaDB_Logo.png" alt="MySQL, MariaDB" class="img-responsive" width="160">
                 </div>
-                <div class="d-flex justify-center align-center powered-logos" style="margin-top: -50px;">
-                    <img src="assets/images/logo/vue-js.png" alt="Vue.js" class="img-responsive" width="120" style="padding-top: -20px;">
+                <div class="d-flex justify-center align-center powered-logos" style="margin-top: -20px;">
+                    <img src="assets/images/logo/vue-js.png" alt="Vue.js" class="img-responsive" width="120">
                     <img src="assets/images/logo/JavaScript-logo.png" alt="JavaScript" class="img-responsive" width="120">
                     <img src="assets/images/logo/vuetify.png" alt="Vuetify.js" class="img-responsive" width="120">
                 </div>
@@ -124,25 +126,27 @@
                             Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
                         </v-card-text>
                         <v-list class="transparent">
-                            <v-list-tile>
+                            <v-list-tile class="d-block">
                                 <v-list-tile-action>
-                                    <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                                    <v-icon class="blue--text text--lighten-2">mdi-phone</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title><a href="tel:+38(099)-999-99-99">+38(099)-999-99-99</a></v-list-tile-title>
                                 </v-list-tile-content>
                             </v-list-tile>
-                            <v-list-tile>
+
+                            <v-list-tile class="d-block">
                                 <v-list-tile-action>
-                                    <v-icon class="blue--text text--lighten-2">place</v-icon>
+                                    <v-icon class="blue--text text--lighten-2">mdi-map-marker-radius</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title>Sumy, Ukraine</v-list-tile-title>
                                 </v-list-tile-content>
                             </v-list-tile>
-                            <v-list-tile>
+
+                            <v-list-tile class="d-block">
                                 <v-list-tile-action>
-                                    <v-icon class="blue--text text--lighten-2">email</v-icon>
+                                    <v-icon class="blue--text text--lighten-2">mdi-email</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title>contact@tiny-crm.com</v-list-tile-title>
