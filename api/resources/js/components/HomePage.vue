@@ -126,32 +126,32 @@
                             Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
                         </v-card-text>
                         <v-list class="transparent">
-                            <v-list-tile class="d-block">
-                                <v-list-tile-action>
+                            <v-list-item class="d-block">
+                                <v-list-item-action>
                                     <v-icon class="blue--text text--lighten-2">mdi-phone</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-content>
-                                    <v-list-tile-title><a href="tel:+38(099)-999-99-99">+38(099)-999-99-99</a></v-list-tile-title>
-                                </v-list-tile-content>
-                            </v-list-tile>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                    <v-list-item-title><a href="tel:+38(099)-999-99-99">+38(099)-999-99-99</a></v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
 
-                            <v-list-tile class="d-block">
-                                <v-list-tile-action>
+                            <v-list-item class="d-block">
+                                <v-list-item-action>
                                     <v-icon class="blue--text text--lighten-2">mdi-map-marker-radius</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-content>
-                                    <v-list-tile-title>Sumy, Ukraine</v-list-tile-title>
-                                </v-list-tile-content>
-                            </v-list-tile>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                    <v-list-item-title>Sumy, Ukraine</v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
 
-                            <v-list-tile class="d-block">
-                                <v-list-tile-action>
+                            <v-list-item class="d-block">
+                                <v-list-item-action>
                                     <v-icon class="blue--text text--lighten-2">mdi-email</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-content>
-                                    <v-list-tile-title>contact@tiny-crm.com</v-list-tile-title>
-                                </v-list-tile-content>
-                            </v-list-tile>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                    <v-list-item-title>contact@tiny-crm.com</v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
                         </v-list>
                     </v-card>
                 </v-flex>
@@ -169,7 +169,6 @@ export default {
   },
   data() {
     return {
-      title: "Your Logo",
       bgImg0: 'assets/images/bg/hero.jpeg',
       bgImg1: 'assets/images/bg/plane.jpg'
     };

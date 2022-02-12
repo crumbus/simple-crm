@@ -2,7 +2,7 @@ import HomePage from '../../components/HomePage';
 import Login from '../../components/pages/auth/Login';
 import Register from '../../components/pages/auth/Register';
 
-export const routes = [
+let routes = [
     {
         name: 'home',
         path: '/',
@@ -19,3 +19,6 @@ export const routes = [
         component: Register
     }
 ];
+
+
+export default routes;

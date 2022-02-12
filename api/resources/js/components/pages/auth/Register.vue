@@ -21,19 +21,28 @@
                 <v-card-text>
                     <v-form>
                         <v-text-field
-                            v-model="username"
+                            v-model="email"
                             outlined
-                            label="Username"
-                            placeholder="JohnDoe"
+                            label="Email"
+                            placeholder="john@example.com"
                             hide-details
                             class="mb-3"
                         ></v-text-field>
 
                         <v-text-field
-                            v-model="email"
+                            v-model="firstName"
                             outlined
-                            label="Email"
-                            placeholder="john@example.com"
+                            label="First Name"
+                            placeholder="John"
+                            hide-details
+                            class="mb-3"
+                        ></v-text-field>
+
+                        <v-text-field
+                            v-model="lastName"
+                            outlined
+                            label="Last Name"
+                            placeholder="Doe"
                             hide-details
                             class="mb-3"
                         ></v-text-field>
@@ -47,6 +56,18 @@
                             :append-icon="isPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
                             hide-details
                             @click:append="isPasswordVisible = !isPasswordVisible"
+                            class="mb-3"
+                        ></v-text-field>
+
+                        <v-text-field
+                            v-model="passwordConfirm"
+                            outlined
+                            :type="isPasswordConfirmVisible ? 'text' : 'password'"
+                            label="Password Confirm"
+                            placeholder="············"
+                            :append-icon="isPasswordConfirmVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
+                            hide-details
+                            @click:append="isPasswordConfirmVisible = !isPasswordConfirmVisible"
                         ></v-text-field>
 
                         <v-checkbox
@@ -115,9 +136,12 @@ export default {
     data() {
         return {
             isPasswordVisible: false,
-            username: '',
+            isPasswordConfirmVisible: false,
+            firstName: '',
+            lastName: '',
             email: '',
             password: '',
+            passwordConfirm: '',
             socialLink: [
                 {
                     icon: mdiFacebook,
@@ -145,6 +169,25 @@ export default {
                 mdiEyeOutline,
                 mdiEyeOffOutline,
             },
+        }
+    },
+
+    methods: {
+        register: function () {
+            let data = {
+                firstname: this.firstName,
+                lastname: this.lastName,
+                email: this.email,
+                password: this.password,
+                password_confirm: this.passwordConfirm,
+            }
+
+            this.$store.dispatch('register', data)
+                .then(() => {
+                    flash('Account registered successfully!', 'success');
+                    this.$router.push('/');
+                })
+                .catch(err => console.log(err));
         }
     }
 }

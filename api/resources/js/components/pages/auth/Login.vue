@@ -4,7 +4,7 @@
             <v-card class="auth-card">
                 <!-- logo -->
                 <v-card-title class="d-flex align-center justify-center py-7">
-                        <h2 class="text-2xl font-weight-semibold">Login</h2>
+                    <h2 class="text-2xl font-weight-semibold">Login</h2>
                 </v-card-title>
 
                 <!-- title -->
@@ -58,6 +58,7 @@
                         </div>
 
                         <v-btn
+                            @click="login"
                             block
                             color="primary"
                             class="mt-6"
@@ -140,6 +141,20 @@ export default {
                 mdiEyeOutline,
                 mdiEyeOffOutline,
             },
+        }
+    },
+
+    methods: {
+        login: function () {
+            let email = this.email
+            let password = this.password
+
+            this.$store.dispatch('login', {email, password})
+                .then(() => {
+                    flash('Logged In Successfully', 'success');
+                    this.$router.push('/');
+                })
+                .catch(err => console.log(err))
         }
     },
 }
